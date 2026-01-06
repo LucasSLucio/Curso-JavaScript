@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" placeholder="idade" name="idad" id="idad">
+   <input type="button" value="verificar" onclick="classificador()">
+   <div id="res"></div>
+   <script>
+       
+      function classificador(){
+        var idade = Number(document.querySelector
+        ('input#idad').value)
+         var res = document.querySelector('div#res')
+
+        if ( idade == 5 || idade <= 7 ){
+            res.innerHTML=`Sua idade é ${idade} anos, portanto sua classificação é <strong> Infantil A</strong>`
+        } else if (idade >= 8 && idade <=10) {
+              res.innerHTML=`Sua idade é ${idade}anos, portanto sua classificação é <strong> Infantil B</strong>`
+        } else if (idade >= 11 && idade <=13) {
+              res.innerHTML=`Sua idade é ${idade}anos, portanto sua classificação é <strong> Juvenil A</strong>`
+        } else if (idade >= 14 && idade <=17) {
+              res.innerHTML=`Sua idade é ${idade}anos, portanto sua classificação é <strong> Juvenil B</strong>`
+        } else if (idade >= 18 ) {
+              res.innerHTML=`Sua idade é ${idade}anos, portanto sua classificação é <strong> Adulto</strong>`
+        }
+
+        }
+      
+   </script>
+</body>
+</html>

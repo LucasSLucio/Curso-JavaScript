@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que bicho é esse? (Switch Case)</title>
+</head>
+<body>
+    <input type="text" name="txtanimal" id="txtanimal">
+    <input type="button" value="verificacao" onclick="verificacao()">
+    <div id="res"></div>
+    <script>
+        function verificacao(){
+            var animal = document.getElementById('txtanimal').value
+            var bicho = animal.toLowerCase()
+            var res = document.getElementById('res')
+       
+          switch (bicho) {
+            case "leão":
+            case "cavalo":
+                res.innerHTML = "É um mamífero";
+                break;
+            case "arara":
+            case "pinguim":
+                    res.innerHTML = "É uma Ave";
+                    res.style.color = "green"
+                    break;
+
+             case "cobra":
+             case "jacaré":
+                    res.innerHTML = "É um Réptil";
+                    break;
+
+                default:
+                    res.innerHTML = "Animal não catalogado";
+                    break;        
+          }
+
+
+        }
+
+
+    </script>
+</body>
+</html>

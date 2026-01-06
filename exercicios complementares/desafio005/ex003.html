@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" placeholder="Digite seu peso" name="kg" id="kg">
+    <input type="number" name="alt" id="alt">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+        function verificar(){
+            var peso = Number(document.querySelector('input#kg').value)
+            var altura = Number(document.querySelector('input#alt').value)
+             var res = document.querySelector('div#res')
+            var imc = peso / (altura ** 2)
+            if (imc <18.5) {
+                res.innerHTML= `<p>O seu imc é de <strong> ${imc.toFixed(2)}</strong> considerado <strong> Abaixo do peso </strong></p>`
+            } else if (imc >= 18.5 || imc <= 24.9) {
+                res.innerHTML=`<p>O seu imc é de <strong> ${imc.toFixed(2)}</strong> considerado <strong> Peso ideal</strong></p>`
+            } else {
+                res.innerHTML=`<p>O seu imc é de <strong> ${imc.toFixed(2)}</strong> considerado <strong>Acima do peso</strong></p>`
+            }
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="text" placeholder="usuario" name="usuario" id="usuario"><br><br>
+    <input type="password" placeholder="Senha" name="senha" id="senha">
+    <input type="button" value="verificar" onclick="check()">
+    <div id="verificador"></div>
+    <script>
+        
+       
+        function check(){
+            var senha = document.querySelector('input#senha').value
+            var usuario = document.querySelector('input#usuario').value
+            var verifi = document.querySelector('div#verificador')
+            if (usuario == 'admin' && senha == '1234') { 
+              verifi.innerHTML='acesso liberado'
+              verifi.style.color ='green'
+
+            } else if (usuario == '' || senha == '') {
+                verifi.innerHTML='Por favor, preencha todos os dados.'
+                verifi.style.color ='orange'
+
+
+            } else {
+                verifi.innerHTML='Acesso Negado!'
+                verifi.style.color ='red'
+            }
+        }
+    </script>
+</body>
+</html>

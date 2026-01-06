@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Desconto em Loja</title>
+</head>
+<body>
+    <input type="number" placeholder="Digite o valor total da compra R$" name="txtvalor" id="txtvalor"> <br><br>
+    <input type="number" placeholder="Código de pagamento" name="codigoPag" id="codigoPag"><p>1 = À Vista, 2 = Cartão, 3 = Parcelado.</p>
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        function verificar(){
+          var valorCompra = Number(document.querySelector('#txtvalor').value)
+          var codigo = Number(document.querySelector('#codigoPag').value)
+          var res = document.querySelector('div#res')
+          var valorFinal = valorCompra - (valorCompra * (10/100) )
+          var valorFinal2 = valorCompra - (valorCompra * (5/100) )
+          switch(codigo) {
+                case 1:
+                    res.innerHTML = `O valor total da sua compra é <strong> R$${valorFinal} </strong>`
+                    break;
+                case 2:
+                    res.innerHTML = `<p> O valor total da sua compra é <strong> R$ ${valorFinal2} </strong> </p>`
+                    break;
+                     case 3:
+                    res.innerHTML = `<p> O valor total da sua compra é <strong> R$ ${valorCompra} </strong> </p>`
+                    break;
+          }
+
+
+
+        }
+       
+
+
+    </script>
+
+</body>
+</html>

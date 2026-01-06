@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Noturno</title>
+</head>
+<body>
+ <input type="text" name="text" id="text"> <p id="p1"></p>
+ <input type="button" value="verificar" onclick="contar()">
+  <script>
+    function contar() {
+       var caracter = (text.value.length)
+       var p1 = document.getElementById('p1')  
+        p1.innerHTML = `Você digitou ${caracter}caracters`
+    }
+  </script>
+</body>
+</html>
