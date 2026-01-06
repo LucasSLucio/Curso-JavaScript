@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabuada Inteligente</title>
+</head>
+<body>
+    <h1>Tabuada</h1>
+    <p>Número: <input type="number" id="txtn"></p>
+    <button onclick="gerarTabuada()">Gerar Tabuada</button>
+    <div id="res">
+        <p>Preencha um número acima.</p> 
+    </div>
+  <script>
+
+    function gerarTabuada() {
+    var tn = document.getElementById('txtn')
+    var res = document.getElementById('res')
+    
+    var n = Number(tn.value)
+    var c = 1
+    
+    res.innerHTML = `<p>Tabuada do <strong>${n}:</strong> <br></p>`
+    
+    while (c <= 10) {
+        // Usando innerHTML para ir "somando" linhas na div
+        res.innerHTML += `${n} x ${c} = <strong>${n*c}</strong> <br>`
+        c++ // Incremento
+    }
+}
+  </script>
+</body>
+</html>
