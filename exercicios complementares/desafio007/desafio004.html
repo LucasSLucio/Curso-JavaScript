@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+var inicio = Number(prompt("Digite o número de início:"))
+var fim = Number(prompt("Digite o número de fim:"))
+var totalPares = 0
+
+for (var c = inicio; c <= fim; c++) {
+    if (c % 2 == 0) {
+        alert(`O número ${c} é PAR.`)
+        totalPares++
+    }
+    
+
+}
+alert(`o total foi ${totalPares}`)
+
+    </script>
+</body>
+</html>

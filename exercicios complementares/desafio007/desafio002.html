@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Tabuada Inteligente</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
     <h1>Tabuada</h1>
@@ -17,15 +19,14 @@
     var res = document.getElementById('res')
     
     var n = Number(tn.value)
-    var c = 1
-    
     res.innerHTML = `<p>Tabuada do <strong>${n}:</strong> <br></p>`
     
-    while (c <= 10) {
+    for (var c = 1; c <= 10; c++) {
         res.innerHTML += `${n} x ${c} = <strong>${n*c}</strong> <br>`
-        c++ 
+        
     }
-}
+      }
+    
   </script>
 </body>
 </html>

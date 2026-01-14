@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>desafio 01</title>
+  </head>
+  <body>
+    <script>  
+     var ini = Number(window.prompt("Escolha um número de inicio: "));
+        var fim = Number(window.prompt("Escolha um fim: "));
+        var passo = Number(window.prompt("Escolha um valor de Passo: "));
+      while (passo == 0) {
+        alert("número invalido, tente outro");
+        var passo = Number(window.prompt("Escolha um valor de Passo: "));
+      } 
+
+        for (var c = ini; c <= fim; c += passo) {
+          alert(c);
+        }
+      
+    </script>
+  </body>
+</html>
